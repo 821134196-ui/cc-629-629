@@ -1,0 +1,110 @@
+* { box-sizing: border-box; }
+body {
+  margin: 0;
+  font-family: -apple-system, "PingFang SC", "Microsoft YaHei", "Segoe UI", sans-serif;
+  background: #f4f6f8;
+  color: #1f2933;
+  font-size: 14px;
+}
+#app { max-width: 1180px; margin: 0 auto; padding: 0 20px 48px; }
+
+header.top {
+  padding: 22px 0 14px;
+}
+header.top h1 { font-size: 22px; margin: 0 0 4px; }
+header.top .sub { color: #6b7280; font-size: 13px; }
+
+nav.tabs {
+  display: flex; gap: 8px; flex-wrap: wrap;
+  border-bottom: 2px solid #e3e8ee; margin-bottom: 20px;
+}
+nav.tabs button {
+  border: none; background: transparent; padding: 10px 18px;
+  font-size: 15px; cursor: pointer; color: #52606d;
+  border-bottom: 3px solid transparent; margin-bottom: -2px;
+}
+nav.tabs button.active { color: #1d6fa5; border-bottom-color: #1d6fa5; font-weight: 600; }
+nav.tabs button:hover { color: #1d6fa5; }
+
+.card {
+  background: #fff; border: 1px solid #e3e8ee; border-radius: 10px;
+  padding: 18px 20px; margin-bottom: 18px;
+}
+.card h2 { font-size: 16px; margin: 0 0 14px; }
+.card h3 { font-size: 14px; margin: 18px 0 10px; color: #3e4c59; }
+
+.row { display: flex; gap: 10px; flex-wrap: wrap; align-items: flex-end; }
+.field { display: flex; flex-direction: column; gap: 5px; }
+.field label { font-size: 12px; color: #6b7280; }
+input, select, textarea {
+  padding: 8px 10px; border: 1px solid #cbd2d9; border-radius: 6px;
+  font-size: 14px; background: #fff; min-width: 120px;
+}
+input:focus, select:focus { outline: none; border-color: #1d6fa5; }
+
+button.btn {
+  padding: 8px 16px; border: none; border-radius: 6px; cursor: pointer;
+  background: #1d6fa5; color: #fff; font-size: 14px;
+}
+button.btn:hover { background: #175b87; }
+button.btn.secondary { background: #e4e7eb; color: #323f4b; }
+button.btn.secondary:hover { background: #d3d8de; }
+button.btn.danger { background: #c0392b; }
+button.btn.danger:hover { background: #a33224; }
+button.btn.warn { background: #b7791f; }
+button.btn.warn:hover { background: #99651a; }
+button:disabled { opacity: .5; cursor: not-allowed; }
+
+table { width: 100%; border-collapse: collapse; font-size: 13px; }
+th, td { padding: 8px 10px; border-bottom: 1px solid #edf0f3; text-align: left; vertical-align: top; }
+th { color: #52606d; font-weight: 600; background: #fafbfc; }
+tr:hover td { background: #f8fafc; }
+td.num, th.num { text-align: right; font-variant-numeric: tabular-nums; }
+
+.badge {
+  display: inline-block; padding: 2px 9px; border-radius: 12px;
+  font-size: 12px; font-weight: 600;
+}
+.badge.active { background: #def7ec; color: #03543f; }
+.badge.suspended { background: #fde8e8; color: #9b1c1c; }
+.badge.open { background: #e1eff6; color: #134e6f; }
+.badge.closed { background: #f3f4f6; color: #4b5563; }
+.badge.plus { background: #def7ec; color: #03543f; }
+.badge.minus { background: #fde8e8; color: #9b1c1c; }
+.badge.dup { background: #fef3c7; color: #92400e; }
+
+.msg { padding: 10px 14px; border-radius: 6px; margin: 10px 0; font-size: 13px; }
+.msg.ok { background: #def7ec; color: #03543f; }
+.msg.err { background: #fde8e8; color: #9b1c1c; }
+.msg.info { background: #e1eff6; color: #134e6f; }
+.msg.warn { background: #fef3c7; color: #92400e; }
+
+.muted { color: #7b8794; font-size: 12px; }
+.basis { color: #52606d; font-size: 12px; }
+.money { font-variant-numeric: tabular-nums; }
+.sidebar-grid { display: grid; grid-template-columns: 300px 1fr; gap: 18px; align-items: start; }
+@media (max-width: 900px) { .sidebar-grid { grid-template-columns: 1fr; } }
+
+.elder-list { max-height: 520px; overflow: auto; }
+.elder-item {
+  padding: 9px 12px; border-radius: 6px; cursor: pointer; border: 1px solid transparent;
+}
+.elder-item:hover { background: #f0f4f8; }
+.elder-item.sel { background: #e1eff6; border-color: #9cc5e0; }
+.elder-item .n { font-weight: 600; }
+.elder-item .c { color: #7b8794; font-size: 12px; }
+
+.stat-row { display: flex; gap: 14px; flex-wrap: wrap; margin-bottom: 6px; }
+.stat {
+  background: #f8fafc; border: 1px solid #e3e8ee; border-radius: 8px;
+  padding: 10px 16px; min-width: 130px;
+}
+.stat .k { color: #7b8794; font-size: 12px; }
+.stat .v { font-size: 19px; font-weight: 700; font-variant-numeric: tabular-nums; }
+
+.txn { font-family: ui-monospace, monospace; font-size: 11px; color: #7b8794; word-break: break-all; }
+.rule-box {
+  background: #fffbea; border: 1px solid #f3e5a7; border-radius: 8px;
+  padding: 10px 14px; font-size: 13px; color: #7c5e10; margin-bottom: 18px;
+}
+.rule-box b { color: #5c4409; }
